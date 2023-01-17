@@ -13,6 +13,15 @@ local lp = game.Players.LocalPlayer
 local humanoid = game.Workspace[lp.Name]:FindFirstChild("HumanoidRootPart")
 local diffclicker = game.Workspace.Click.ClickDetector
 local alt = lp.Name ~= ''..settings.MainAccount..''
+local rs = game:GetService("RunService")
+
+task.spawn(function()
+    rs.Heartbeat:Connect(function()
+        if alt then
+            fireclickdetector(diffclicker)
+        end
+    end)
+end)
 
 task.spawn(function()
     game.Players[settings.MainAccount].Chatted:connect(function(msg)
@@ -42,18 +51,6 @@ task.spawn(function()
             end
         end
     end
-end)
-
-task.spawn(function()
-    pcall(function()
-        if alt then
-            print("alt detected, autofarming")
-            diffclicker.MaxActivationDistance = 9999999
-            while task.wait() do
-                fireclickdetector(diffclicker)
-            end
-        end
-    end)
 end)
 
 task.spawn(function()
