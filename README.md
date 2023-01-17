@@ -1,5 +1,5 @@
 features:
-alt account optimization (mostly for luck boost) and auto clicker (standalone in the Standalone tab)
+alt account optimization (mostly for luck boost) and auto clicker (standalone in the "standalone" file)
 
 
 Script:
