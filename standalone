@@ -1,1 +1,10 @@
-a
+local diffclicker = game.Workspace.Click.ClickDetector
+local rs = game:GetService("RunService")
+getgenv().on = true
+
+
+rs.Heartbeat:Connect(function()
+    if on then
+        fireclickdetector(diffclicker)
+    end
+end)
