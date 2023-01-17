@@ -1,0 +1,64 @@
+game.Loaded:Connect(function()
+    if game.PlaceId == 11915606459 then
+        wait(5)
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+
+local lp = game.Players.LocalPlayer
+local humanoid = game.Workspace[lp.Name]:FindFirstChild("HumanoidRootPart")
+local diffclicker = game.Workspace.Click.ClickDetector
+local alt = lp.Name ~= ''..settings.MainAccount..''
+
+task.spawn(function()
+    game.Players[settings.MainAccount].Chatted:connect(function(msg)
+        if msg:lower() == "!rein" then
+            humanoid.CFrame = game.Workspace.ReincarnationPad.CFrame + Vector3.new(0,5,0)
+        end
+    end)
+end)
+
+task.spawn(function()
+    game.Players[settings.MainAccount].Chatted:connect(function(msg)
+        if msg:lower() == "!sac" then
+            humanoid.CFrame = game.Workspace.SacrificePad.CFrame + Vector3.new(0,5,0)
+        end
+    end)
+end)
+
+task.spawn(function()
+    if settings.DestroyMap then
+        while task.wait() do
+            for i,v in pairs(game.Workspace:GetChildren()) do
+                if v.Name ~= "Click" and v.ClassName ~= "SpawnLocation" and v.Name ~= "SacrificePad" and v.Name ~= "ReincarnationPad" and v ~= game.Workspace[lp.Name] and v ~= game.Workspace.Camera and v.ClassName ~= "Terrain" then
+                    v:Destroy()
+                end
+            end
+        end
+    end
+end)
+
+task.spawn(function()
+    pcall(function()
+        if alt then
+            print("alt detected, autofarming")
+            diffclicker.MaxActivationDistance = 9999999
+            while task.wait() do
+                fireclickdetector(diffclicker)
+            end
+        end
+    end)
+end)
+
+task.spawn(function()
+    if alt then
+        pcall(setfpscap(settings.AltFps))
+        game:GetService("RunService"):Set3dRenderingEnabled(settings.Rendering)
+    end
+end)
+end
+end)
