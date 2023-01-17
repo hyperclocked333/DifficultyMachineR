@@ -10,6 +10,8 @@ Script:
 
 --[[PUT THIS SCRIPT IN YOUR AUTOEXEC]]--
 
+--[[say "!rein" or "!sac" on your main youre playing on to telport all the accounts to the respective locations]]--
+
 getgenv().settings = {
     MainAccount = "coolDude23_1", --the main acc, case sensitve
     Rendering = false, --rendering or no (recommended off)
