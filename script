@@ -31,11 +31,13 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-    if settings.DestroyMap and alt then
-        while task.wait() do
-            for i,v in pairs(game.Workspace:GetChildren()) do
-                if v.Name ~= "Click" and v.ClassName ~= "SpawnLocation" and v.Name ~= "SacrificePad" and v.Name ~= "ReincarnationPad" and v ~= game.Workspace[lp.Name] and v ~= game.Workspace.Camera and v.ClassName ~= "Terrain" then
-                    v:Destroy()
+    if settings.DestroyMap then
+        if alt then
+            while task.wait() do
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v.Name ~= "Click" and v.ClassName ~= "SpawnLocation" and v.Name ~= "SacrificePad" and v.Name ~= "ReincarnationPad" and v ~= game.Workspace[lp.Name] and v ~= game.Workspace.Camera and v.ClassName ~= "Terrain" then
+                        v:Destroy()
+                    end
                 end
             end
         end
