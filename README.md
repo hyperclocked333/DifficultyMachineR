@@ -1,4 +1,4 @@
---[[SYNAPSE X ONLY]]--
+```--[[SYNAPSE X ONLY]]--
 
 --[[PUT THIS SCRIPT IN YOUR AUTOEXEC]]--
 
@@ -10,4 +10,4 @@ getgenv().settings = {
     
 }
 
-loadstring(Game:HttpGet("https://raw.githubusercontent.com/hyperclocked333/DifficultyMachineR/main/script"))
+loadstring(Game:HttpGet("https://raw.githubusercontent.com/hyperclocked333/DifficultyMachineR/main/script"))```
