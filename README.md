@@ -1,3 +1,5 @@
+script for https://www.roblox.com/games/11915606459/The-Difficulty-Machine-REVAMP (reqs brain)
+
 features:
 alt account optimization (mostly for luck boost) and auto clicker (standalone in the "standalone" file)
 
