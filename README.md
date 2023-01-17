@@ -1,4 +1,5 @@
-```--[[SYNAPSE X ONLY]]--
+```
+--[[SYNAPSE X ONLY]]--
 
 --[[PUT THIS SCRIPT IN YOUR AUTOEXEC]]--
 
