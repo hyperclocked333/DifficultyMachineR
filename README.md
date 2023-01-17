@@ -1,3 +1,7 @@
+features:
+alt account optimization (mostly for luck boost)
+auto clicker (standalone under this)
+
 ```
 --[[SYNAPSE X ONLY, MEANT TO BE USED WITH ROBLOX ALT ACCOUNT MANAGER]]--
 
