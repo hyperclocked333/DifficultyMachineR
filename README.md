@@ -16,4 +16,4 @@ getgenv().settings = {
     
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperclocked333/The-Difficulty-Machine-REVAMP/main/script"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hyperclocked333/The-Difficulty-Machine-REVAMP-Script/main/script"))()
