@@ -8,3 +8,5 @@ rs.Heartbeat:Connect(function()
         fireclickdetector(diffclicker)
     end
 end)
+
+-- feel free to use task.wait() instead
